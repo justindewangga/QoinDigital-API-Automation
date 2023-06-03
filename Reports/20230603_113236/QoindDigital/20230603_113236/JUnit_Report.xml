@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="QoindDigital" time="12.153" tests="9" failures="0" errors="0">
+   <testsuite name="QoindDigital" tests="9" failures="0" errors="0" time="12.153" skipped="0" timestamp="2023-06-03 11:32:48" hostname="justindewanggaputra - localhost" id="Test Suites/QoindDigital">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="/Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236"/>
+         <property name="logFiles" value="/Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="justindewanggaputra - localhost"/>
+         <property name="hostAddress" value="127.0.0.1"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="8.4.1.208"/>
+      </properties>
+      <testcase name="Test Cases/Get List of User" time="2.504" classname="Test Cases/Get List of User" status="PASSED">
+         <system-out><![CDATA[2023-06-03 11:32:48 - [TEST_CASE][PASSED] - Test Cases/Get List of User: Test Cases/Get List of User
+
+2023-06-03 11:32:49 - [TEST_STEP][PASSED] - getListUser = findTestObject("QoinDigital/Get List User", ["page":page, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:49 - [TEST_STEP][PASSED] - respListUser = sendRequest(getListUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:51 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/0.har
+
+2023-06-03 11:32:51 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - jsonRespListUser = jsonSlurper.parseText(respListUser.getResponseText()): null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - log_info = "
+" + "=" * 40 + "
+": null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - log_info += "List Of User 
+": null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - log_info += "=" * 40 + "
+": null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - log_info += "Page		: " + page + "
+": null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - log_info += "Per page	: " + per_page + "
+": null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - log_info += "Total		: " + total + "
+": null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - log_info += "Total Page	: " + total_pages + "
+": null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - log_info += "Data:
+": null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - data.each({ java.lang.Object item -> ... }): null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - log_info += "=" * 40: null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - else: 
+========================================
+List Of User 
+========================================
+Page		: 1
+Per page	: 6
+Total		: 12
+Total Page	: 2
+Data:
+id: 1, email: george.bluth@reqres.in, first_name: George, last_name: Bluth, avatar: https://reqres.in/img/faces/1-image.jpg
+id: 2, email: janet.weaver@reqres.in, first_name: Janet, last_name: Weaver, avatar: https://reqres.in/img/faces/2-image.jpg
+id: 3, email: emma.wong@reqres.in, first_name: Emma, last_name: Wong, avatar: https://reqres.in/img/faces/3-image.jpg
+id: 4, email: eve.holt@reqres.in, first_name: Eve, last_name: Holt, avatar: https://reqres.in/img/faces/4-image.jpg
+id: 5, email: charles.morris@reqres.in, first_name: Charles, last_name: Morris, avatar: https://reqres.in/img/faces/5-image.jpg
+id: 6, email: tracey.ramos@reqres.in, first_name: Tracey, last_name: Ramos, avatar: https://reqres.in/img/faces/6-image.jpg
+========================================
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - logInfo(log_info): 
+========================================
+List Of User 
+========================================
+Page		: 1
+Per page	: 6
+Total		: 12
+Total Page	: 2
+Data:
+id: 1, email: george.bluth@reqres.in, first_name: George, last_name: Bluth, avatar: https://reqres.in/img/faces/1-image.jpg
+id: 2, email: janet.weaver@reqres.in, first_name: Janet, last_name: Weaver, avatar: https://reqres.in/img/faces/2-image.jpg
+id: 3, email: emma.wong@reqres.in, first_name: Emma, last_name: Wong, avatar: https://reqres.in/img/faces/3-image.jpg
+id: 4, email: eve.holt@reqres.in, first_name: Eve, last_name: Holt, avatar: https://reqres.in/img/faces/4-image.jpg
+id: 5, email: charles.morris@reqres.in, first_name: Charles, last_name: Morris, avatar: https://reqres.in/img/faces/5-image.jpg
+id: 6, email: tracey.ramos@reqres.in, first_name: Tracey, last_name: Ramos, avatar: https://reqres.in/img/faces/6-image.jpg
+========================================
+
+2023-06-03 11:32:51 - [MESSAGE][INFO] - 
+========================================
+List Of User 
+========================================
+Page		: 1
+Per page	: 6
+Total		: 12
+Total Page	: 2
+Data:
+id: 1, email: george.bluth@reqres.in, first_name: George, last_name: Bluth, avatar: https://reqres.in/img/faces/1-image.jpg
+id: 2, email: janet.weaver@reqres.in, first_name: Janet, last_name: Weaver, avatar: https://reqres.in/img/faces/2-image.jpg
+id: 3, email: emma.wong@reqres.in, first_name: Emma, last_name: Wong, avatar: https://reqres.in/img/faces/3-image.jpg
+id: 4, email: eve.holt@reqres.in, first_name: Eve, last_name: Holt, avatar: https://reqres.in/img/faces/4-image.jpg
+id: 5, email: charles.morris@reqres.in, first_name: Charles, last_name: Morris, avatar: https://reqres.in/img/faces/5-image.jpg
+id: 6, email: tracey.ramos@reqres.in, first_name: Tracey, last_name: Ramos, avatar: https://reqres.in/img/faces/6-image.jpg
+========================================]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Get Single User" time="0.575" classname="Test Cases/Get Single User" status="PASSED">
+         <system-out><![CDATA[2023-06-03 11:32:51 - [TEST_CASE][PASSED] - Test Cases/Get Single User: Test Cases/Get Single User
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - getSingleUser = findTestObject("QoinDigital/Get Single User", ["userId":userId, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - respSingleUser = sendRequest(getSingleUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:51 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/1.har
+
+2023-06-03 11:32:51 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - jsonRespSingleUser = jsonSlurper.parseText(respSingleUser.getResponseText()): null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - else: null
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Id		: " + id + "
+Email		: " + email + "
+First Name	: " + first_name + "
+Last Name	: " + last_name + "
+Avatar		: " + avatar + "
+" + "=" * 40): 
+========================================
+Id		: 1
+Email		: george.bluth@reqres.in
+First Name	: George
+Last Name	: Bluth
+Avatar		: https://reqres.in/img/faces/1-image.jpg
+========================================
+
+2023-06-03 11:32:51 - [MESSAGE][INFO] - 
+========================================
+Id		: 1
+Email		: george.bluth@reqres.in
+First Name	: George
+Last Name	: Bluth
+Avatar		: https://reqres.in/img/faces/1-image.jpg
+========================================
+
+2023-06-03 11:32:51 - [TEST_STEP][PASSED] - return jsonRespSingleUser.data.email: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Update User" time="0.938" classname="Test Cases/Update User" status="PASSED">
+         <system-out><![CDATA[2023-06-03 11:32:52 - [TEST_CASE][PASSED] - Test Cases/Update User: Test Cases/Update User
+
+2023-06-03 11:32:52 - [TEST_STEP][PASSED] - updateUser = findTestObject("QoinDigital/Put Update", ["name":name, "job":job, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:52 - [TEST_STEP][PASSED] - respUpdateUser = sendRequest(updateUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:52 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/2.har
+
+2023-06-03 11:32:52 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:52 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:52 - [TEST_STEP][PASSED] - jsonRespUpdateUser = jsonSlurper.parseText(respUpdateUser.getResponseText()): null
+
+2023-06-03 11:32:52 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:52 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:52 - [TEST_STEP][PASSED] - else: null
+
+2023-06-03 11:32:52 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Success Update User" + "
+" + "=" * 40 + "
+Name		: " + name + "
+Job		: " + job + "
+Update At	: " + updatedAt + "
+" + "=" * 40): 
+========================================
+Success Update User
+========================================
+Name		: justin
+Job		: QA Engineer
+Update At	: 2023-06-03T04:32:52.869Z
+========================================
+
+2023-06-03 11:32:52 - [MESSAGE][INFO] - 
+========================================
+Success Update User
+========================================
+Name		: justin
+Job		: QA Engineer
+Update At	: 2023-06-03T04:32:52.869Z
+========================================
+
+2023-06-03 11:32:52 - [TEST_STEP][PASSED] - return respCode: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Register User" time="1.38" classname="Test Cases/Register User" status="PASSED">
+         <system-out><![CDATA[2023-06-03 11:32:53 - [TEST_CASE][PASSED] - Test Cases/Register User: Test Cases/Register User
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - email = callTestCase(findTestCase("Get Single User"), ["userId":userId], STOP_ON_FAILURE): Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:53 - [TEST_CASE][PASSED] - Test Cases/Get Single User: Test Cases/Get Single User
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - getSingleUser = findTestObject("QoinDigital/Get Single User", ["userId":userId, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - respSingleUser = sendRequest(getSingleUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:53 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/3.har
+
+2023-06-03 11:32:53 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - jsonRespSingleUser = jsonSlurper.parseText(respSingleUser.getResponseText()): null
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - else: null
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Id		: " + id + "
+Email		: " + email + "
+First Name	: " + first_name + "
+Last Name	: " + last_name + "
+Avatar		: " + avatar + "
+" + "=" * 40): 
+========================================
+Id		: 1
+Email		: george.bluth@reqres.in
+First Name	: George
+Last Name	: Bluth
+Avatar		: https://reqres.in/img/faces/1-image.jpg
+========================================
+
+2023-06-03 11:32:53 - [MESSAGE][INFO] - 
+========================================
+Id		: 1
+Email		: george.bluth@reqres.in
+First Name	: George
+Last Name	: Bluth
+Avatar		: https://reqres.in/img/faces/1-image.jpg
+========================================
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - return jsonRespSingleUser.data.email: null
+
+2023-06-03 11:32:53 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - registerUser = findTestObject("QoinDigital/Post Register Successful", ["email":email, "password":password, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:53 - [TEST_STEP][PASSED] - respRegisterUser = sendRequest(registerUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:54 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/4.har
+
+2023-06-03 11:32:54 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()): null
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - else: 
+========================================
+Register of Email george.bluth@reqres.in was Success
+========================================
+Id		: 1
+Token		: QpwL5tke4Pnpja7X1
+========================================
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Register of Email " + email + " was Success" + "
+" + "=" * 40 + "
+Id		: " + id + "
+Token		: " + token + "
+" + "=" * 40): 
+========================================
+Register of Email george.bluth@reqres.in was Success
+========================================
+Id		: 1
+Token		: QpwL5tke4Pnpja7X1
+========================================
+
+2023-06-03 11:32:54 - [MESSAGE][INFO] - 
+========================================
+Register of Email george.bluth@reqres.in was Success
+========================================
+Id		: 1
+Token		: QpwL5tke4Pnpja7X1
+========================================]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Register User" time="1.001" classname="Test Cases/Register User" status="PASSED">
+         <system-out><![CDATA[2023-06-03 11:32:54 - [TEST_CASE][PASSED] - Test Cases/Register User: Test Cases/Register User
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - email = callTestCase(findTestCase("Get Single User"), ["userId":userId], STOP_ON_FAILURE): Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:54 - [TEST_CASE][PASSED] - Test Cases/Get Single User: Test Cases/Get Single User
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - getSingleUser = findTestObject("QoinDigital/Get Single User", ["userId":userId, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - respSingleUser = sendRequest(getSingleUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:54 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/5.har
+
+2023-06-03 11:32:54 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - jsonRespSingleUser = jsonSlurper.parseText(respSingleUser.getResponseText()): null
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - else: null
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Id		: " + id + "
+Email		: " + email + "
+First Name	: " + first_name + "
+Last Name	: " + last_name + "
+Avatar		: " + avatar + "
+" + "=" * 40): 
+========================================
+Id		: 2
+Email		: janet.weaver@reqres.in
+First Name	: Janet
+Last Name	: Weaver
+Avatar		: https://reqres.in/img/faces/2-image.jpg
+========================================
+
+2023-06-03 11:32:54 - [MESSAGE][INFO] - 
+========================================
+Id		: 2
+Email		: janet.weaver@reqres.in
+First Name	: Janet
+Last Name	: Weaver
+Avatar		: https://reqres.in/img/faces/2-image.jpg
+========================================
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - return jsonRespSingleUser.data.email: null
+
+2023-06-03 11:32:54 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - registerUser = findTestObject("QoinDigital/Post Register Successful", ["email":email, "password":password, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:54 - [TEST_STEP][PASSED] - respRegisterUser = sendRequest(registerUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:55 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/6.har
+
+2023-06-03 11:32:55 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()): null
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - else: 
+========================================
+Register of Email janet.weaver@reqres.in was Success
+========================================
+Id		: 2
+Token		: QpwL5tke4Pnpja7X2
+========================================
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Register of Email " + email + " was Success" + "
+" + "=" * 40 + "
+Id		: " + id + "
+Token		: " + token + "
+" + "=" * 40): 
+========================================
+Register of Email janet.weaver@reqres.in was Success
+========================================
+Id		: 2
+Token		: QpwL5tke4Pnpja7X2
+========================================
+
+2023-06-03 11:32:55 - [MESSAGE][INFO] - 
+========================================
+Register of Email janet.weaver@reqres.in was Success
+========================================
+Id		: 2
+Token		: QpwL5tke4Pnpja7X2
+========================================]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Register User" time="0.934" classname="Test Cases/Register User" status="PASSED">
+         <system-out><![CDATA[2023-06-03 11:32:55 - [TEST_CASE][PASSED] - Test Cases/Register User: Test Cases/Register User
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - email = callTestCase(findTestCase("Get Single User"), ["userId":userId], STOP_ON_FAILURE): Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:55 - [TEST_CASE][PASSED] - Test Cases/Get Single User: Test Cases/Get Single User
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - getSingleUser = findTestObject("QoinDigital/Get Single User", ["userId":userId, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - respSingleUser = sendRequest(getSingleUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:55 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/7.har
+
+2023-06-03 11:32:55 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - jsonRespSingleUser = jsonSlurper.parseText(respSingleUser.getResponseText()): null
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - else: null
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Id		: " + id + "
+Email		: " + email + "
+First Name	: " + first_name + "
+Last Name	: " + last_name + "
+Avatar		: " + avatar + "
+" + "=" * 40): 
+========================================
+Id		: 3
+Email		: emma.wong@reqres.in
+First Name	: Emma
+Last Name	: Wong
+Avatar		: https://reqres.in/img/faces/3-image.jpg
+========================================
+
+2023-06-03 11:32:55 - [MESSAGE][INFO] - 
+========================================
+Id		: 3
+Email		: emma.wong@reqres.in
+First Name	: Emma
+Last Name	: Wong
+Avatar		: https://reqres.in/img/faces/3-image.jpg
+========================================
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - return jsonRespSingleUser.data.email: null
+
+2023-06-03 11:32:55 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - registerUser = findTestObject("QoinDigital/Post Register Successful", ["email":email, "password":password, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:55 - [TEST_STEP][PASSED] - respRegisterUser = sendRequest(registerUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:56 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/8.har
+
+2023-06-03 11:32:56 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:56 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:56 - [TEST_STEP][PASSED] - jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()): null
+
+2023-06-03 11:32:56 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:56 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:56 - [TEST_STEP][PASSED] - else: 
+========================================
+Register of Email emma.wong@reqres.in was Success
+========================================
+Id		: 3
+Token		: QpwL5tke4Pnpja7X3
+========================================
+
+2023-06-03 11:32:56 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Register of Email " + email + " was Success" + "
+" + "=" * 40 + "
+Id		: " + id + "
+Token		: " + token + "
+" + "=" * 40): 
+========================================
+Register of Email emma.wong@reqres.in was Success
+========================================
+Id		: 3
+Token		: QpwL5tke4Pnpja7X3
+========================================
+
+2023-06-03 11:32:56 - [MESSAGE][INFO] - 
+========================================
+Register of Email emma.wong@reqres.in was Success
+========================================
+Id		: 3
+Token		: QpwL5tke4Pnpja7X3
+========================================]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Register User" time="1.476" classname="Test Cases/Register User" status="PASSED">
+         <system-out><![CDATA[2023-06-03 11:32:56 - [TEST_CASE][PASSED] - Test Cases/Register User: Test Cases/Register User
+
+2023-06-03 11:32:56 - [TEST_STEP][PASSED] - email = callTestCase(findTestCase("Get Single User"), ["userId":userId], STOP_ON_FAILURE): Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:56 - [TEST_CASE][PASSED] - Test Cases/Get Single User: Test Cases/Get Single User
+
+2023-06-03 11:32:56 - [TEST_STEP][PASSED] - getSingleUser = findTestObject("QoinDigital/Get Single User", ["userId":userId, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:56 - [TEST_STEP][PASSED] - respSingleUser = sendRequest(getSingleUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:57 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/9.har
+
+2023-06-03 11:32:57 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - jsonRespSingleUser = jsonSlurper.parseText(respSingleUser.getResponseText()): null
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - else: null
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Id		: " + id + "
+Email		: " + email + "
+First Name	: " + first_name + "
+Last Name	: " + last_name + "
+Avatar		: " + avatar + "
+" + "=" * 40): 
+========================================
+Id		: 4
+Email		: eve.holt@reqres.in
+First Name	: Eve
+Last Name	: Holt
+Avatar		: https://reqres.in/img/faces/4-image.jpg
+========================================
+
+2023-06-03 11:32:57 - [MESSAGE][INFO] - 
+========================================
+Id		: 4
+Email		: eve.holt@reqres.in
+First Name	: Eve
+Last Name	: Holt
+Avatar		: https://reqres.in/img/faces/4-image.jpg
+========================================
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - return jsonRespSingleUser.data.email: null
+
+2023-06-03 11:32:57 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - registerUser = findTestObject("QoinDigital/Post Register Successful", ["email":email, "password":password, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - respRegisterUser = sendRequest(registerUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:57 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/10.har
+
+2023-06-03 11:32:57 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()): null
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - else: 
+========================================
+Register of Email eve.holt@reqres.in was Success
+========================================
+Id		: 4
+Token		: QpwL5tke4Pnpja7X4
+========================================
+
+2023-06-03 11:32:57 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Register of Email " + email + " was Success" + "
+" + "=" * 40 + "
+Id		: " + id + "
+Token		: " + token + "
+" + "=" * 40): 
+========================================
+Register of Email eve.holt@reqres.in was Success
+========================================
+Id		: 4
+Token		: QpwL5tke4Pnpja7X4
+========================================
+
+2023-06-03 11:32:57 - [MESSAGE][INFO] - 
+========================================
+Register of Email eve.holt@reqres.in was Success
+========================================
+Id		: 4
+Token		: QpwL5tke4Pnpja7X4
+========================================]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Register User" time="1.089" classname="Test Cases/Register User" status="PASSED">
+         <system-out><![CDATA[2023-06-03 11:32:57 - [TEST_CASE][PASSED] - Test Cases/Register User: Test Cases/Register User
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - email = callTestCase(findTestCase("Get Single User"), ["userId":userId], STOP_ON_FAILURE): Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:58 - [TEST_CASE][PASSED] - Test Cases/Get Single User: Test Cases/Get Single User
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - getSingleUser = findTestObject("QoinDigital/Get Single User", ["userId":userId, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - respSingleUser = sendRequest(getSingleUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:58 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/11.har
+
+2023-06-03 11:32:58 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - jsonRespSingleUser = jsonSlurper.parseText(respSingleUser.getResponseText()): null
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - else: null
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Id		: " + id + "
+Email		: " + email + "
+First Name	: " + first_name + "
+Last Name	: " + last_name + "
+Avatar		: " + avatar + "
+" + "=" * 40): 
+========================================
+Id		: 5
+Email		: charles.morris@reqres.in
+First Name	: Charles
+Last Name	: Morris
+Avatar		: https://reqres.in/img/faces/5-image.jpg
+========================================
+
+2023-06-03 11:32:58 - [MESSAGE][INFO] - 
+========================================
+Id		: 5
+Email		: charles.morris@reqres.in
+First Name	: Charles
+Last Name	: Morris
+Avatar		: https://reqres.in/img/faces/5-image.jpg
+========================================
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - return jsonRespSingleUser.data.email: null
+
+2023-06-03 11:32:58 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - registerUser = findTestObject("QoinDigital/Post Register Successful", ["email":email, "password":password, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:58 - [TEST_STEP][PASSED] - respRegisterUser = sendRequest(registerUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:59 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/12.har
+
+2023-06-03 11:32:59 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()): null
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - else: 
+========================================
+Register of Email charles.morris@reqres.in was Success
+========================================
+Id		: 5
+Token		: QpwL5tke4Pnpja7X5
+========================================
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Register of Email " + email + " was Success" + "
+" + "=" * 40 + "
+Id		: " + id + "
+Token		: " + token + "
+" + "=" * 40): 
+========================================
+Register of Email charles.morris@reqres.in was Success
+========================================
+Id		: 5
+Token		: QpwL5tke4Pnpja7X5
+========================================
+
+2023-06-03 11:32:59 - [MESSAGE][INFO] - 
+========================================
+Register of Email charles.morris@reqres.in was Success
+========================================
+Id		: 5
+Token		: QpwL5tke4Pnpja7X5
+========================================]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Register User" time="1.459" classname="Test Cases/Register User" status="PASSED">
+         <system-out><![CDATA[2023-06-03 11:32:59 - [TEST_CASE][PASSED] - Test Cases/Register User: Test Cases/Register User
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - email = callTestCase(findTestCase("Get Single User"), ["userId":userId], STOP_ON_FAILURE): Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:59 - [TEST_CASE][PASSED] - Test Cases/Get Single User: Test Cases/Get Single User
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - getSingleUser = findTestObject("QoinDigital/Get Single User", ["userId":userId, "basedUrl":basedUrl]): null
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - respSingleUser = sendRequest(getSingleUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:32:59 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/13.har
+
+2023-06-03 11:32:59 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - jsonRespSingleUser = jsonSlurper.parseText(respSingleUser.getResponseText()): null
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - else: null
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Id		: " + id + "
+Email		: " + email + "
+First Name	: " + first_name + "
+Last Name	: " + last_name + "
+Avatar		: " + avatar + "
+" + "=" * 40): 
+========================================
+Id		: 6
+Email		: tracey.ramos@reqres.in
+First Name	: Tracey
+Last Name	: Ramos
+Avatar		: https://reqres.in/img/faces/6-image.jpg
+========================================
+
+2023-06-03 11:32:59 - [MESSAGE][INFO] - 
+========================================
+Id		: 6
+Email		: tracey.ramos@reqres.in
+First Name	: Tracey
+Last Name	: Ramos
+Avatar		: https://reqres.in/img/faces/6-image.jpg
+========================================
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - return jsonRespSingleUser.data.email: null
+
+2023-06-03 11:32:59 - [MESSAGE][PASSED] - Call Test Case 'Test Cases/Get Single User' successfully
+
+2023-06-03 11:32:59 - [TEST_STEP][PASSED] - registerUser = findTestObject("QoinDigital/Post Register Successful", ["email":email, "password":password, "basedUrl":basedUrl]): null
+
+2023-06-03 11:33:00 - [TEST_STEP][PASSED] - respRegisterUser = sendRequest(registerUser, OPTIONAL): Send request successfully
+
+2023-06-03 11:33:00 - [MESSAGE][INFO] - HAR: /Users/justindewanggaputra/Katalon Studio/QoinDigital-API-Automation/Reports/20230603_113236/QoindDigital/20230603_113236/requests/main/14.har
+
+2023-06-03 11:33:00 - [MESSAGE][PASSED] - Send request successfully
+
+2023-06-03 11:33:00 - [TEST_STEP][PASSED] - jsonSlurper = new groovy.json.JsonSlurper(): null
+
+2023-06-03 11:33:00 - [TEST_STEP][PASSED] - jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()): null
+
+2023-06-03 11:33:00 - [TEST_STEP][PASSED] - respCode = getStatusCode().toString(): null
+
+2023-06-03 11:33:00 - [TEST_STEP][PASSED] - if (respCode != "200"): null
+
+2023-06-03 11:33:00 - [TEST_STEP][PASSED] - else: 
+========================================
+Register of Email tracey.ramos@reqres.in was Success
+========================================
+Id		: 6
+Token		: QpwL5tke4Pnpja7X6
+========================================
+
+2023-06-03 11:33:00 - [TEST_STEP][PASSED] - logInfo("
+" + "=" * 40 + "
+Register of Email " + email + " was Success" + "
+" + "=" * 40 + "
+Id		: " + id + "
+Token		: " + token + "
+" + "=" * 40): 
+========================================
+Register of Email tracey.ramos@reqres.in was Success
+========================================
+Id		: 6
+Token		: QpwL5tke4Pnpja7X6
+========================================
+
+2023-06-03 11:33:00 - [MESSAGE][INFO] - 
+========================================
+Register of Email tracey.ramos@reqres.in was Success
+========================================
+Id		: 6
+Token		: QpwL5tke4Pnpja7X6
+========================================]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2023-06-03 11:32:48 - [TEST_SUITE][PASSED] - QoindDigital: Test Cases/Register User]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

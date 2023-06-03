@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Update User</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>00c8c849-e9d0-430b-867b-adda7620727c</testCaseGuid>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>1fa2cb9d-603f-493d-a53a-6651c2dd21d8</variableId>
+   </variableLinks>
+   <variableLinks>
+      <testDataLinkId></testDataLinkId>
+      <type>DEFAULT</type>
+      <value></value>
+      <variableId>636b60e1-457d-4f67-b367-37e8dd59606c</variableId>
+   </variableLinks>
+   <variable>
+      <defaultValue>'justin'</defaultValue>
+      <description></description>
+      <id>1fa2cb9d-603f-493d-a53a-6651c2dd21d8</id>
+      <masked>false</masked>
+      <name>name</name>
+   </variable>
+   <variable>
+      <defaultValue>'QA Engineer'</defaultValue>
+      <description></description>
+      <id>636b60e1-457d-4f67-b367-37e8dd59606c</id>
+      <masked>false</masked>
+      <name>job</name>
+   </variable>
+</TestCaseEntity>

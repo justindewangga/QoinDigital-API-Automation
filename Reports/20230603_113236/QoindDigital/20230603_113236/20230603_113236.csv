@@ -1,0 +1,108 @@
+Suite/Test/Step Name,Browser,Description,Tag,Start time,End time,Duration,Status
+QoindDigital,,,,2023-06-03 11:32:48,2023-06-03 11:33:00,12.153s,PASSED
+,,,,,,,
+Test Cases/Get List of User,,,,2023-06-03 11:32:48,2023-06-03 11:32:51,2.504s,PASSED
+"getListUser = findTestObject(""QoinDigital/Get List User"", [""page"":page, ""basedUrl"":basedUrl])",,,,2023-06-03 11:32:49,2023-06-03 11:32:49,0.293s,PASSED
+"respListUser = sendRequest(getListUser, OPTIONAL)",,,,2023-06-03 11:32:49,2023-06-03 11:32:51,1.447s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.027s,PASSED
+jsonRespListUser = jsonSlurper.parseText(respListUser.getResponseText()),,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.023s,PASSED
+respCode = getStatusCode().toString(),,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.002s,PASSED
+"log_info = ""
+"" + ""="" * 40 + ""
+""",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.001s,PASSED
+"log_info += ""List Of User 
+""",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.001s,PASSED
+"log_info += ""="" * 40 + ""
+""",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.002s,PASSED
+"log_info += ""Page		: "" + page + ""
+""",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.012s,PASSED
+"log_info += ""Per page	: "" + per_page + ""
+""",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.000s,PASSED
+"log_info += ""Total		: "" + total + ""
+""",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.000s,PASSED
+"log_info += ""Total Page	: "" + total_pages + ""
+""",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.002s,PASSED
+"log_info += ""Data:
+""",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.000s,PASSED
+data.each({ java.lang.Object item -> ... }),,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.023s,PASSED
+"log_info += ""="" * 40",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.001s,PASSED
+"if (respCode != ""200"")",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.001s,PASSED
+else,,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.008s,PASSED
+,,,,,,,
+Test Cases/Get Single User,,,,2023-06-03 11:32:51,2023-06-03 11:32:52,0.575s,PASSED
+"getSingleUser = findTestObject(""QoinDigital/Get Single User"", [""userId"":userId, ""basedUrl"":basedUrl])",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.106s,PASSED
+"respSingleUser = sendRequest(getSingleUser, OPTIONAL)",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.165s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.000s,PASSED
+jsonRespSingleUser = jsonSlurper.parseText(respSingleUser.getResponseText()),,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.001s,PASSED
+respCode = getStatusCode().toString(),,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.001s,PASSED
+"if (respCode != ""200"")",,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.000s,PASSED
+else,,,,2023-06-03 11:32:51,2023-06-03 11:32:51,0.001s,PASSED
+,,,,,,,
+Test Cases/Update User,,,,2023-06-03 11:32:52,2023-06-03 11:32:52,0.938s,PASSED
+"updateUser = findTestObject(""QoinDigital/Put Update"", [""name"":name, ""job"":job, ""basedUrl"":basedUrl])",,,,2023-06-03 11:32:52,2023-06-03 11:32:52,0.135s,PASSED
+"respUpdateUser = sendRequest(updateUser, OPTIONAL)",,,,2023-06-03 11:32:52,2023-06-03 11:32:52,0.508s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-06-03 11:32:52,2023-06-03 11:32:52,0.001s,PASSED
+jsonRespUpdateUser = jsonSlurper.parseText(respUpdateUser.getResponseText()),,,,2023-06-03 11:32:52,2023-06-03 11:32:52,0.001s,PASSED
+respCode = getStatusCode().toString(),,,,2023-06-03 11:32:52,2023-06-03 11:32:52,0.001s,PASSED
+"if (respCode != ""200"")",,,,2023-06-03 11:32:52,2023-06-03 11:32:52,0.000s,PASSED
+else,,,,2023-06-03 11:32:52,2023-06-03 11:32:52,0.012s,PASSED
+,,,,,,,
+Test Cases/Register User,,,,2023-06-03 11:32:53,2023-06-03 11:32:54,1.380s,PASSED
+"email = callTestCase(findTestCase(""Get Single User""), [""userId"":userId], STOP_ON_FAILURE)",,,,2023-06-03 11:32:53,2023-06-03 11:32:53,0.429s,PASSED
+"registerUser = findTestObject(""QoinDigital/Post Register Successful"", [""email"":email, ""password"":password, ""basedUrl"":basedUrl])",,,,2023-06-03 11:32:53,2023-06-03 11:32:53,0.104s,PASSED
+"respRegisterUser = sendRequest(registerUser, OPTIONAL)",,,,2023-06-03 11:32:53,2023-06-03 11:32:54,0.530s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-06-03 11:32:54,2023-06-03 11:32:54,0.001s,PASSED
+jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()),,,,2023-06-03 11:32:54,2023-06-03 11:32:54,0.002s,PASSED
+respCode = getStatusCode().toString(),,,,2023-06-03 11:32:54,2023-06-03 11:32:54,0.001s,PASSED
+"if (respCode != ""200"")",,,,2023-06-03 11:32:54,2023-06-03 11:32:54,0.001s,PASSED
+else,,,,2023-06-03 11:32:54,2023-06-03 11:32:54,0.001s,PASSED
+,,,,,,,
+Test Cases/Register User,,,,2023-06-03 11:32:54,2023-06-03 11:32:55,1.001s,PASSED
+"email = callTestCase(findTestCase(""Get Single User""), [""userId"":userId], STOP_ON_FAILURE)",,,,2023-06-03 11:32:54,2023-06-03 11:32:54,0.324s,PASSED
+"registerUser = findTestObject(""QoinDigital/Post Register Successful"", [""email"":email, ""password"":password, ""basedUrl"":basedUrl])",,,,2023-06-03 11:32:54,2023-06-03 11:32:54,0.091s,PASSED
+"respRegisterUser = sendRequest(registerUser, OPTIONAL)",,,,2023-06-03 11:32:54,2023-06-03 11:32:55,0.521s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-06-03 11:32:55,2023-06-03 11:32:55,0.004s,PASSED
+jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()),,,,2023-06-03 11:32:55,2023-06-03 11:32:55,0.000s,PASSED
+respCode = getStatusCode().toString(),,,,2023-06-03 11:32:55,2023-06-03 11:32:55,0.001s,PASSED
+"if (respCode != ""200"")",,,,2023-06-03 11:32:55,2023-06-03 11:32:55,0.000s,PASSED
+else,,,,2023-06-03 11:32:55,2023-06-03 11:32:55,0.001s,PASSED
+,,,,,,,
+Test Cases/Register User,,,,2023-06-03 11:32:55,2023-06-03 11:32:56,0.934s,PASSED
+"email = callTestCase(findTestCase(""Get Single User""), [""userId"":userId], STOP_ON_FAILURE)",,,,2023-06-03 11:32:55,2023-06-03 11:32:55,0.319s,PASSED
+"registerUser = findTestObject(""QoinDigital/Post Register Successful"", [""email"":email, ""password"":password, ""basedUrl"":basedUrl])",,,,2023-06-03 11:32:55,2023-06-03 11:32:55,0.087s,PASSED
+"respRegisterUser = sendRequest(registerUser, OPTIONAL)",,,,2023-06-03 11:32:55,2023-06-03 11:32:56,0.481s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-06-03 11:32:56,2023-06-03 11:32:56,0.000s,PASSED
+jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()),,,,2023-06-03 11:32:56,2023-06-03 11:32:56,0.001s,PASSED
+respCode = getStatusCode().toString(),,,,2023-06-03 11:32:56,2023-06-03 11:32:56,0.000s,PASSED
+"if (respCode != ""200"")",,,,2023-06-03 11:32:56,2023-06-03 11:32:56,0.000s,PASSED
+else,,,,2023-06-03 11:32:56,2023-06-03 11:32:56,0.007s,PASSED
+,,,,,,,
+Test Cases/Register User,,,,2023-06-03 11:32:56,2023-06-03 11:32:57,1.476s,PASSED
+"email = callTestCase(findTestCase(""Get Single User""), [""userId"":userId], STOP_ON_FAILURE)",,,,2023-06-03 11:32:56,2023-06-03 11:32:57,0.804s,PASSED
+"registerUser = findTestObject(""QoinDigital/Post Register Successful"", [""email"":email, ""password"":password, ""basedUrl"":basedUrl])",,,,2023-06-03 11:32:57,2023-06-03 11:32:57,0.147s,PASSED
+"respRegisterUser = sendRequest(registerUser, OPTIONAL)",,,,2023-06-03 11:32:57,2023-06-03 11:32:57,0.489s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-06-03 11:32:57,2023-06-03 11:32:57,0.001s,PASSED
+jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()),,,,2023-06-03 11:32:57,2023-06-03 11:32:57,0.000s,PASSED
+respCode = getStatusCode().toString(),,,,2023-06-03 11:32:57,2023-06-03 11:32:57,0.000s,PASSED
+"if (respCode != ""200"")",,,,2023-06-03 11:32:57,2023-06-03 11:32:57,0.000s,PASSED
+else,,,,2023-06-03 11:32:57,2023-06-03 11:32:57,0.001s,PASSED
+,,,,,,,
+Test Cases/Register User,,,,2023-06-03 11:32:57,2023-06-03 11:32:59,1.089s,PASSED
+"email = callTestCase(findTestCase(""Get Single User""), [""userId"":userId], STOP_ON_FAILURE)",,,,2023-06-03 11:32:58,2023-06-03 11:32:58,0.293s,PASSED
+"registerUser = findTestObject(""QoinDigital/Post Register Successful"", [""email"":email, ""password"":password, ""basedUrl"":basedUrl])",,,,2023-06-03 11:32:58,2023-06-03 11:32:58,0.236s,PASSED
+"respRegisterUser = sendRequest(registerUser, OPTIONAL)",,,,2023-06-03 11:32:58,2023-06-03 11:32:59,0.514s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-06-03 11:32:59,2023-06-03 11:32:59,0.000s,PASSED
+jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()),,,,2023-06-03 11:32:59,2023-06-03 11:32:59,0.000s,PASSED
+respCode = getStatusCode().toString(),,,,2023-06-03 11:32:59,2023-06-03 11:32:59,0.001s,PASSED
+"if (respCode != ""200"")",,,,2023-06-03 11:32:59,2023-06-03 11:32:59,0.000s,PASSED
+else,,,,2023-06-03 11:32:59,2023-06-03 11:32:59,0.001s,PASSED
+,,,,,,,
+Test Cases/Register User,,,,2023-06-03 11:32:59,2023-06-03 11:33:00,1.459s,PASSED
+"email = callTestCase(findTestCase(""Get Single User""), [""userId"":userId], STOP_ON_FAILURE)",,,,2023-06-03 11:32:59,2023-06-03 11:32:59,0.677s,PASSED
+"registerUser = findTestObject(""QoinDigital/Post Register Successful"", [""email"":email, ""password"":password, ""basedUrl"":basedUrl])",,,,2023-06-03 11:32:59,2023-06-03 11:33:00,0.265s,PASSED
+"respRegisterUser = sendRequest(registerUser, OPTIONAL)",,,,2023-06-03 11:33:00,2023-06-03 11:33:00,0.482s,PASSED
+jsonSlurper = new groovy.json.JsonSlurper(),,,,2023-06-03 11:33:00,2023-06-03 11:33:00,0.000s,PASSED
+jsonRespRegisterUser = jsonSlurper.parseText(respRegisterUser.getResponseText()),,,,2023-06-03 11:33:00,2023-06-03 11:33:00,0.000s,PASSED
+respCode = getStatusCode().toString(),,,,2023-06-03 11:33:00,2023-06-03 11:33:00,0.000s,PASSED
+"if (respCode != ""200"")",,,,2023-06-03 11:33:00,2023-06-03 11:33:00,0.000s,PASSED
+else,,,,2023-06-03 11:33:00,2023-06-03 11:33:00,0.001s,PASSED
